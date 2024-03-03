@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4LW</title>
+</head>
+<body>
+    <div style="width: 100vw; height: 100vh; object-fit: contain; display: flex; justify-content: center; align-items: center;">
+        <img src="/Assets/bg.png" style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;">
+
+        <div id="gridContainer" style="width: 500px; max-height: 500px; position: absolute; top: 100px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            
+            <!-- <div style="width: 90px; height: 90px; background-color: #259FD0;  border: solid #3C445C 3px 0px; border-radius: 20px; display: flex; justify-content: center; align-items: center;">
+                <h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">A</h1>
+            </div> -->
+            
+            
+        </div>
+
+        <div id="outsideGridContainer" style="width: 100%; height: 100%; position: absolute; top: 0px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <!-- <div style="width: 90px; height: 90px; background-color: #259FD0;  border: solid #3C445C 3px 0px; border-radius: 20px; display: flex; justify-content: center; align-items: center;">
+                <h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">A</h1>
+            </div> -->
+            
+        </div>
+
+    </div>
+</body>
+<script>
+
+    var currentBoxSelected = '';
+    var boxSpaceSelected = '';
+    var boxesOccupied = [] // [occupies space, occupied by letter]
+
+    var pendingSwap = [] // [ [ocupiedSpace, newOwner], [ocupiedSpace, forcedtomoveLetter] ]
+
+    function loadGrid()
+    {
+        const parent = document.getElementById('gridContainer')
+
+        // KEY
+        // - space for letter
+        // . block
+
+        const grid = [ '-', '-', '-', 'T', 
+                       '.', '-', '.', '-',
+                       '-', 'F', '.', '-',
+                       '-', '-', '-', '-' ]
+
+        for (boxInd in grid)
+        {
+            const box = grid[boxInd]
+
+
+            const elem = document.createElement('div')
+            if(box == '-')
+            {
+                elem.setAttribute('id', 'textspace')
+                elem.style = 'width: 90px; height: 90px; border: solid #3C445C 3px; border-radius: 20px; display: flex; justify-content: center; align-items: center;'
+                elem.innerHTML = '<h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;"></h1>'
+            }else if (box == '.'){
+                elem.setAttribute('id', 'notext')
+                elem.style = 'width: 90px; height: 90px; background-color: #3C445C;  border: solid transparent 3px; border-radius: 20px; display: flex; justify-content: center; align-items: center;'
+                elem.innerHTML = '<h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;"></h1>'
+            
+            }else{
+                elem.setAttribute('id', 'startingtext')
+                elem.style = 'width: 90px; height: 90px; background-color: #259FD0;  border: solid transparent 3px; border-radius: 20px; display: flex; justify-content: center; align-items: center;'
+                elem.innerHTML = '<h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">'+box+'</h1>'
+            }
+            parent.appendChild(elem)
+        }
+
+    }
+
+    loadGrid()
+
+    function loadOutsideGrid()
+    {
+        const parent = document.getElementById('outsideGridContainer')
+
+        const letters = [ 'T', 'A', 'P', 'O', 'L', 'R', 'B' , 'S', 'I', 'O', 'I']
+
+        for (boxInd in letters)
+        {
+            const box = letters[boxInd]
+
+
+            const elem = document.createElement('div')
+            elem.style = 'width: 90px; height: 90px; background-color: #254BD0;  border: solid transparent 3px; border-radius: 20px; display: flex; justify-content: center; align-items: center; cursor: pointer; left: 0px; position: relative; top: 700px;'
+            elem.innerHTML = '<h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">'+box+'</h1>'
+            parent.appendChild(elem)
+        }
+
+    }
+
+    loadOutsideGrid()
+
+    function clickLetter(letter)
+    {
+        currentBoxSelected = letter
+        console.log(letter)
+    }
+
+    function resetCurrentBoxSelection()
+    {
+        currentBoxSelected = ''
+    }
+
+    function reConnectEveryLetterToBox()
+    {
+
+        for (bOpp in boxesOccupied)
+        {
+            const boxSpace = boxesOccupied[bOpp][0]
+            const letterBox = boxesOccupied[bOpp][1]
+
+            console.log(boxesOccupied[bOpp])
+
+            console.log()
+
+            document.getElementById('outsideGridContainer').children[letterBox].style.left = document.getElementById('gridContainer').children[boxSpace].offsetLeft + (window.innerWidth / 2) - (250) + 'px'
+            document.getElementById('outsideGridContainer').children[letterBox].style.top = document.getElementById('gridContainer').children[boxSpace].offsetTop + 100 + 'px'
+            
+            // document.getElementById('gridContainer').children[boxSpace].style.borderColor = 'transparent'
+        }
+
+    }
+
+    function eventsLst()
+    {
+        addEventListener('mousedown', (event)=> {
+            const x = event.clientX
+            const y = event.clientY
+
+            // console.log(x + ' ' + y)
+
+            const freeLettersList = document.getElementById('outsideGridContainer').children
+
+            for (letterInd in freeLettersList)
+            {
+                if(letterInd == 'length') {break}
+                // console.log(letterInd)
+                const letterBox = freeLettersList[letterInd]
+                const leftPost = letterBox.getBoundingClientRect().left
+                const topPost = letterBox.getBoundingClientRect().top
+
+                const boxWidth = 90
+                const boxHeight = 90
+
+                if(x > leftPost && x < leftPost + 90)
+                {
+                    if(y > topPost && y < topPost + 90)
+                    {
+                        console.log('clicked ' + letterInd)
+                        currentBoxSelected = letterInd
+                    }
+                }
+
+            }
+
+        } )
+
+        addEventListener('mouseup', ()=> {
+            if(boxSpaceSelected != '')
+            {
+                const boxSpace = boxSpaceSelected
+                const letterBox = currentBoxSelected
+    
+
+                boxesOccupied.push([boxSpace, letterBox])
+
+
+                reConnectEveryLetterToBox()
+            }
+            
+            
+            boxSpaceSelected = ''
+            currentBoxSelected = ''
+
+        })
+
+        addEventListener('mousemove', (event)=>{
+            const x = event.clientX
+            const y = event.clientY
+
+            const boxWidth = 90
+            const boxHeight = 90
+
+            if(currentBoxSelected != '')
+            {
+                // console.log(x + ' ' + y)
+
+                document.getElementById('outsideGridContainer').children[currentBoxSelected].style.position = 'absolute'
+                document.getElementById('outsideGridContainer').children[currentBoxSelected].style.left = x - (boxWidth/2)  + 'px' // 1000px
+                document.getElementById('outsideGridContainer').children[currentBoxSelected].style.top = y - (boxHeight/2) + 'px' //250px
+
+                // console.log(document.getElementById('outsideGridContainer').children[currentBoxSelected].style.top)
+
+                const currentBox = currentBoxSelected
+
+                
+                
+                const leftPost = document.getElementById('outsideGridContainer').children[currentBox].offsetLeft - (window.innerWidth/2) +250 + 45
+                const topPost = document.getElementById('outsideGridContainer').children[currentBox].offsetTop - 100 + 45
+                
+                const parentBoxes = document.getElementById('gridContainer').children
+                
+                const boxesWidthAmdHeight = 90
+                const gapSpace = 20
+                
+                // console.log(topPost)
+                for (boxSpaceIndx in parentBoxes)
+                {
+                    const boxSpace = parentBoxes[boxSpaceIndx]
+
+                    // console.log(boxSpace.children[0].innerHTML)
+                    // console.log('topOffset: ' + boxSpace.offsetTop)
+
+                    if(boxSpace.id == 'textspace')
+                    {
+                        boxSpace.style.backgroundColor = 'transparent'
+                    }else if (boxSpace.id == 'notext'){
+                        boxSpace.style.backgroundColor = '#3C445C'
+                    }else if (boxSpace.id == 'startingtext'){
+                        boxSpace.style.backgroundColor = '#259FD0'
+                    }
+
+
+                    var matched = false
+                    if(leftPost > boxSpace.offsetLeft - (gapSpace) && leftPost < boxSpace.offsetLeft + boxesWidthAmdHeight)
+                    {
+                        if(topPost > boxSpace.offsetTop - (gapSpace) && topPost < boxSpace.offsetTop + boxesWidthAmdHeight)
+                        {
+                            if(boxSpace.children[0].innerHTML == '')
+                            {
+                                var boxOcupied = false
+                                for (boInd in boxesOccupied)
+                                {
+                                    const boxOcp = boxesOccupied[boInd][0]
+                                    const letterOcupying = boxesOccupied[boInd][1]
+                                    
+                                    if(boxOcp == boxSpaceIndx)
+                                    {
+                                        boxOcupied = true
+                                        // for (boInd2 in boxesOccupied)
+                                        // {
+                                        //     const boxOcp2 = boxesOccupied[boInd2][0]
+                                        //     const letterOcupying2 = boxesOccupied[boInd2][1]
+                                            
+                                        //     if(letterOcupying2 == currentBox) // our letter that we want to move to an ocupied possition is already in an ocupied position so perform swap
+                                        //     {
+                                        //         // console.log('performing swap')
+                                        //         // pendingSwap = [ [boxOcp, letterOcupying2], [boxOcp2, letterOcupying] ] // [ [ocupiedSpace, newOwner], [ocupiedSpace, forcedtomoveLetter] ]
+                                                
+                                        //         // matched = true
+                                        //         // console.log('matched with ' + boxSpaceIndx + ' but doing a swap')
+                                        //         // document.getElementById('outsideGridContainer').children[letterOcupying2].style.backgroundColor = 'red'
+                                        //     }
+                                        // }
+                                    }
+
+
+                                }
+
+                                if(boxOcupied == false)
+                                {
+                                    if(boxSpace.id != 'notext')
+                                    {
+                                        matched = true
+                                        console.log('matched with ' + boxSpaceIndx)
+                                        boxSpace.style.backgroundColor = '#8C44FF'
+                                        boxSpaceSelected = boxSpaceIndx
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // if(matched == false)
+                    // {
+                    //     console.log('set to false')
+                    //     boxSpaceSelected = ''
+                    // }
+
+                }
+
+                for (boxOcpIndx in boxesOccupied)
+                {
+                    const boxesOcp = boxesOccupied[boxOcpIndx][0]
+                    const boxElem = document.getElementById('gridContainer').children[boxesOcp]
+
+                    const lettersList = document.getElementById('outsideGridContainer').children
+
+                    var boxHasOwner = false
+
+                    for (lIndx in lettersList)
+                    {
+                        const letterElem = lettersList[lIndx]
+
+                        const leftPostLet = letterElem.offsetLeft - (window.innerWidth/2) +250 + 45
+                        const topPostLet = letterElem.offsetTop - 100 + 45
+
+                        if(leftPostLet > boxElem.offsetLeft - (gapSpace) && leftPostLet < boxElem.offsetLeft + boxesWidthAmdHeight)
+                        {
+                            if(topPostLet > boxElem.offsetTop - (gapSpace) && topPostLet < boxElem.offsetTop + boxesWidthAmdHeight)
+                            {
+                                boxHasOwner = true
+                            }
+                        }
+                    }
+
+                    if(boxHasOwner == false)
+                    {
+                        console.log('letter has been removed from box')
+                        boxesOccupied.splice(boxOcpIndx, 1)
+                        document.getElementById('gridContainer').children[boxesOcp].setAttribute('style', 'width: 90px; height: 90px; border: solid #3C445C 3px; border-radius: 20px; display: flex; justify-content: center; align-items: center;')
+                        // console.log(document.getElementById('gridContainer').children[boxesOcp])
+                    }
+                }
+            }
+        })
+    }
+
+    eventsLst()
+
+
+</script>
+<style>
+    @font-face{
+        font-family: Jua;
+        src: url(/Assets/Fonts/Jua-Regular.ttf);
+    }
+
+    body{
+        font-family: Jua
+    }
+
+    body{
+        /* background-color: #171A23; */
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+    }
+    *{
+    -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                      supported by Chrome, Edge, Opera and Firefox */
+    }
+</style>
+</html>
