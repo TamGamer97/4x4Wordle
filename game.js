@@ -1,1683 +1,12 @@
 wordsList = [ 
     [
-    "ab​",
-    "ad​",
-    "ah​",
-    "am​",
-    "an​",
-    "as​",
-    "at​",
-    "aw​",
-    "ba​",
-    "be​",
-    "by​",
-    "da​",
-    "do​",
-    "eh​",
-    "er​",
-    "ex​",
-    "fa​",
-    "go​",
-    "ha​",
-    "he​",
-    "hi​",
-    "ho​",
-    "id​",
-    "if​",
-    "in​",
-    "is​",
-    "it​",
-    "la​",
-    "lo​",
-    "ma​",
-    "me​",
-    "mi​",
-    "mm​",
-    "my​",
-    "no​",
-    "ny​",
-    "of​",
-    "oh​",
-    "ok​",
-    "om​",
-    "on​",
-    "or​",
-    "os​",
-    "pa​",
-    "pi​",
-    "re​",
-    "sh​",
-    "so​",
-    "ta​",
-    "to​",
-    "uh​",
-    "um​",
-    "up​",
-    "us​",
-    "we​",
-    "ya​",
-    "ye​", "yo​"
+        'if', 'do', 'as', 'at', 'be', 'by', 'go', 'it', 'in', 'is', 'on', 'or', 'of', 'to', 'we', 'no', 'us', 'up', 'me', 'so'
     ],
     [
-        "abs​",
-        "ace​",
-        "act​",
-        "add​",
-        "ads​",
-        "age​",
-        "ago​",
-        "aid​",
-        "aim​",
-        "air​",
-        "ale​",
-        "all​",
-        "alt​",
-        "amp​",
-        "and​",
-        "ant​",
-        "any​",
-        "app​",
-        "apt​",
-        "arc​",
-        "are​",
-        "ark​",
-        "arm​",
-        "art​",
-        "ash​",
-        "ask​",
-        "asp​",
-        "ass​",
-        "ate​",
-        "aye​",
-        "bad​",
-        "bag​",
-        "ban​",
-        "bar​",
-        "bat​",
-        "bay​",
-        "bed​",
-        "bee​",
-        "ben​",
-        "bet​",
-        "bid​",
-        "big​",
-        "bin​",
-        "bio​",
-        "bit​",
-        "biz​",
-        "bob​",
-        "bon​",
-        "bot​",
-        "bow​",
-        "box​",
-        "boy​",
-        "bra​",
-        "bud​",
-        "bug​",
-        "bus​",
-        "but​",
-        "buy​",
-        "bye​",
-        "cab​",
-        "cad​",
-        "cam​",
-        "can​",
-        "cap​",
-        "car​",
-        "cat​",
-        "chi​",
-        "cis​",
-        "cod​",
-        "con​",
-        "cop​",
-        "cow​",
-        "cox​",
-        "cry​",
-        "cue​",
-        "cum​",
-        "cup​",
-        "cur​",
-        "cut​",
-        "dad​",
-        "dam​",
-        "dan​",
-        "day​",
-        "dee​",
-        "den​",
-        "dew​",
-        "did​",
-        "die​",
-        "dig​",
-        "dim​",
-        "din​",
-        "dip​",
-        "doc​",
-        "doe​",
-        "dog​",
-        "don​",
-        "dos​",
-        "dot​",
-        "dow​",
-        "dry​",
-        "dub​",
-        "due​",
-        "duo​",
-        "dye​",
-        "ear​",
-        "eat​",
-        "egg​",
-        "ego​",
-        "elf​",
-        "elk​",
-        "end​",
-        "era​",
-        "err​",
-        "eve​",
-        "eye​",
-        "fan​",
-        "far​",
-        "fat​",
-        "fax​",
-        "fed​",
-        "fee​",
-        "few​",
-        "fig​",
-        "fin​",
-        "fit​",
-        "fix​",
-        "flu​",
-        "fly​",
-        "fog​",
-        "for​",
-        "fox​",
-        "fry​",
-        "fun​",
-        "fur​",
-        "gag​",
-        "gal​",
-        "gap​",
-        "gas​",
-        "gel​",
-        "gem​",
-        "geo​",
-        "get​",
-        "gif​",
-        "gig​",
-        "gnu​",
-        "god​",
-        "goo​",
-        "got​",
-        "gum​",
-        "gun​",
-        "guy​",
-        "gym​",
-        "had​",
-        "ham​",
-        "has​",
-        "hat​",
-        "hay​",
-        "hen​",
-        "her​",
-        "hex​",
-        "hey​",
-        "him​",
-        "hip​",
-        "his​",
-        "hit​",
-        "hmm​",
-        "hoc​",
-        "hop​",
-        "hot​",
-        "how​",
-        "hub​",
-        "huh​",
-        "hut​",
-        "ice​",
-        "ids​",
-        "ill​",
-        "ink​",
-        "inn​",
-        "ins​",
-        "ion​",
-        "its​",
-        "ivy​",
-        "jam​",
-        "jar​",
-        "jay​",
-        "jet​",
-        "job​",
-        "joe​",
-        "joy​",
-        "ken​",
-        "key​",
-        "kid​",
-        "kit​",
-        "lab​",
-        "lam​",
-        "lap​",
-        "las​",
-        "lat​",
-        "law​",
-        "lay​",
-        "lea​",
-        "led​",
-        "lee​",
-        "leg​",
-        "let​",
-        "lid​",
-        "lie​",
-        "lip​",
-        "lit​",
-        "log​",
-        "lot​",
-        "low​",
-        "mad​",
-        "mag​",
-        "man​",
-        "map​",
-        "mar​",
-        "mas​",
-        "mat​",
-        "max​",
-        "may​",
-        "men​",
-        "met​",
-        "mic​",
-        "mid​",
-        "mil​",
-        "mix​",
-        "mob​",
-        "mod​",
-        "mom​",
-        "mud​",
-        "mug​",
-        "mum​",
-        "nat​",
-        "nay​",
-        "net​",
-        "new​",
-        "nil​",
-        "non​",
-        "nor​",
-        "nos​",
-        "not​",
-        "now​",
-        "nut​",
-        "oak​",
-        "odd​",
-        "off​",
-        "oil​",
-        "old​",
-        "one​",
-        "ons​",
-        "opt​",
-        "org​",
-        "our​",
-        "out​",
-        "owl​",
-        "own​",
-        "pac​",
-        "pad​",
-        "pak​",
-        "pal​",
-        "pan​",
-        "par​",
-        "pas​",
-        "pat​",
-        "pay​",
-        "pee​",
-        "peg​",
-        "pen​",
-        "per​",
-        "pet​",
-        "pic​",
-        "pie​",
-        "pig​",
-        "pin​",
-        "pit​",
-        "pix​",
-        "pod​",
-        "pop​",
-        "pos​",
-        "pot​",
-        "pre​",
-        "pro​",
-        "pst​",
-        "pub​",
-        "put​",
-        "ram​",
-        "ran​",
-        "rap​",
-        "rat​",
-        "raw​",
-        "ray​",
-        "rec​",
-        "red​",
-        "ref​",
-        "rep​",
-        "res​",
-        "rev​",
-        "rid​",
-        "rim​",
-        "rip​",
-        "rob​",
-        "rod​",
-        "rom​",
-        "row​",
-        "rub​",
-        "rue​",
-        "rug​",
-        "run​",
-        "sac​",
-        "sad​",
-        "sap​",
-        "sat​",
-        "saw​",
-        "say​",
-        "sea​",
-        "sec​",
-        "see​",
-        "set​",
-        "she​",
-        "shy​",
-        "sic​",
-        "sim​",
-        "sin​",
-        "sip​",
-        "sir​",
-        "sis​",
-        "sit​",
-        "six​",
-        "ski​",
-        "sky​",
-        "sol​",
-        "son​",
-        "sox​",
-        "soy​",
-        "spa​",
-        "spy​",
-        "sub​",
-        "sue​",
-        "sum​",
-        "sun​",
-        "tab​",
-        "tag​",
-        "tai​",
-        "tan​",
-        "tap​",
-        "tar​",
-        "tas​",
-        "tax​",
-        "tea​",
-        "ted​",
-        "tee​",
-        "ten​",
-        "tex​",
-        "thy​",
-        "tie​",
-        "til​",
-        "tin​",
-        "tip​",
-        "toe​",
-        "tom​",
-        "ton​",
-        "too​",
-        "top​",
-        "tot​",
-        "toy​",
-        "try​",
-        "tub​",
-        "two​",
-        "ufo​",
-        "uni​",
-        "ups​",
-        "use​",
-        "van​",
-        "vat​",
-        "vet​",
-        "via​",
-        "wan​",
-        "wap​",
-        "war​",
-        "was​",
-        "wax​",
-        "way​",
-        "web​",
-        "wed​",
-        "wet​",
-        "who​",
-        "why​",
-        "win​",
-        "wit​",
-        "won​",
-        "wow​",
-        "yea​",
-        "yen​",
-        "yes​",
-        "yet​",
-        "you​",
-        "zen​",
-        "zip​",
-        "zoo​"
+        'for', 'var', 'new', 'try', 'let', 'fog', 'pop', 'num', 'log', 'yes', 'map', 'set', 'get', 'has', 'out', 'and', 'not', 'cry', 'bad', 'mad', 'sad', 'fun', 'top', 'min', 'sum', 'met', 'ran', 'bus', 'gum', 'bow', 'toy', 'gym', 'dad', 'mum','sat','fed', 'say', 'day', 'eat', 'bug', 'hut', 'mud', 'age', 'ant', 'dog', 'cat','gas', 'gap', 'gel', 'hat', 'lie', 'you', 'big'
     ],
     [
-        "able​",
-        "acer​",
-        "acid​",
-        "acne​",
-        "acre​",
-        "acts​",
-        "adds​",
-        "aero​",
-        "aged​",
-        "ages​",
-        "aide​",
-        "aids​",
-        "aims​",
-        "alas​",
-        "alfa​",
-        "ally​",
-        "alma​",
-        "alps​",
-        "also​",
-        "alto​",
-        "amen​",
-        "amid​",
-        "amps​",
-        "anon​",
-        "anti​",
-        "apex​",
-        "apps​",
-        "aqua​",
-        "arch​",
-        "area​",
-        "arms​",
-        "army​",
-        "arts​",
-        "asks​",
-        "atom​",
-        "aunt​",
-        "aura​",
-        "auto​",
-        "avid​",
-        "away​",
-        "axis​",
-        "axle​",
-        "babe​",
-        "baby​",
-        "back​",
-        "bags​",
-        "bail​",
-        "bait​",
-        "bake​",
-        "bald​",
-        "ball​",
-        "band​",
-        "bang​",
-        "bank​",
-        "barb​",
-        "bare​",
-        "bark​",
-        "barn​",
-        "bars​",
-        "base​",
-        "bash​",
-        "bass​",
-        "bath​",
-        "bats​",
-        "bead​",
-        "beam​",
-        "bean​",
-        "bear​",
-        "beat​",
-        "beck​",
-        "beds​",
-        "beef​",
-        "been​",
-        "beer​",
-        "bees​",
-        "bell​",
-        "belt​",
-        "bend​",
-        "bent​",
-        "best​",
-        "beta​",
-        "bets​",
-        "bias​",
-        "bids​",
-        "bike​",
-        "bill​",
-        "bind​",
-        "bins​",
-        "bios​",
-        "bird​",
-        "bite​",
-        "bits​",
-        "blah​",
-        "blew​",
-        "blog​",
-        "blow​",
-        "blue​",
-        "boat​",
-        "body​",
-        "boil​",
-        "bold​",
-        "bolt​",
-        "bomb​",
-        "bond​",
-        "bone​",
-        "book​",
-        "boom​",
-        "boot​",
-        "bore​",
-        "born​",
-        "boss​",
-        "both​",
-        "bots​",
-        "bout​",
-        "bowl​",
-        "boys​",
-        "brad​",
-        "bras​",
-        "brew​",
-        "buck​",
-        "buff​",
-        "bugs​",
-        "bulb​",
-        "bulk​",
-        "bull​",
-        "bump​",
-        "burn​",
-        "bury​",
-        "bush​",
-        "bust​",
-        "busy​",
-        "butt​",
-        "buys​",
-        "buzz​",
-        "byte​",
-        "cafe​",
-        "cage​",
-        "cake​",
-        "calf​",
-        "call​",
-        "calm​",
-        "came​",
-        "camp​",
-        "cams​",
-        "cane​",
-        "cans​",
-        "cant​",
-        "cape​",
-        "caps​",
-        "carb​",
-        "card​",
-        "care​",
-        "cars​",
-        "cart​",
-        "case​",
-        "cash​",
-        "cast​",
-        "cats​",
-        "cave​",
-        "cell​",
-        "cent​",
-        "chad​",
-        "chap​",
-        "char​",
-        "chat​",
-        "chef​",
-        "chic​",
-        "chin​",
-        "chip​",
-        "chop​",
-        "ciao​",
-        "cite​",
-        "city​",
-        "clad​",
-        "clan​",
-        "clay​",
-        "clip​",
-        "club​",
-        "clue​",
-        "coal​",
-        "coat​",
-        "code​",
-        "coil​",
-        "coin​",
-        "coke​",
-        "cola​",
-        "cold​",
-        "colt​",
-        "comb​",
-        "come​",
-        "cone​",
-        "cons​",
-        "cook​",
-        "cool​",
-        "coop​",
-        "cope​",
-        "cops​",
-        "copy​",
-        "cord​",
-        "core​",
-        "cork​",
-        "corn​",
-        "cost​",
-        "cote​",
-        "coup​",
-        "cove​",
-        "cows​",
-        "cozy​",
-        "crab​",
-        "crap​",
-        "crew​",
-        "crib​",
-        "crop​",
-        "crow​",
-        "cube​",
-        "cubs​",
-        "cues​",
-        "cuff​",
-        "cult​",
-        "cups​",
-        "curb​",
-        "cure​",
-        "curl​",
-        "cute​",
-        "cuts​",
-        "dale​",
-        "dame​",
-        "damn​",
-        "dans​",
-        "dare​",
-        "dark​",
-        "dart​",
-        "dash​",
-        "data​",
-        "date​",
-        "dawn​",
-        "days​",
-        "dead​",
-        "deaf​",
-        "deal​",
-        "dean​",
-        "dear​",
-        "debt​",
-        "deck​",
-        "deco​",
-        "deed​",
-        "deep​",
-        "deer​",
-        "deli​",
-        "dell​",
-        "demo​",
-        "dent​",
-        "deny​",
-        "desk​",
-        "dial​",
-        "dice​",
-        "died​",
-        "dies​",
-        "diet​",
-        "dire​",
-        "dirt​",
-        "disc​",
-        "dish​",
-        "disk​",
-        "diva​",
-        "dive​",
-        "dock​",
-        "docs​",
-        "does​",
-        "dogs​",
-        "doll​",
-        "dome​",
-        "done​",
-        "dong​",
-        "doom​",
-        "door​",
-        "dose​",
-        "dots​",
-        "dove​",
-        "down​",
-        "drag​",
-        "draw​",
-        "drew​",
-        "drop​",
-        "drug​",
-        "drum​",
-        "dual​",
-        "duck​",
-        "duct​",
-        "dude​",
-        "dues​",
-        "duff​",
-        "duke​",
-        "dull​",
-        "duly​",
-        "dumb​",
-        "dump​",
-        "dust​",
-        "duty​",
-        "each​",
-        "earl​",
-        "earn​",
-        "ears​",
-        "ease​",
-        "east​",
-        "easy​",
-        "eats​",
-        "echo​",
-        "eddy​",
-        "edge​",
-        "edit​",
-        "eggs​",
-        "else​",
-        "ends​",
-        "envy​",
-        "epic​",
-        "euro​",
-        "even​",
-        "ever​",
-        "evil​",
-        "exam​",
-        "exit​",
-        "expo​",
-        "eyed​",
-        "eyes​",
-        "face​",
-        "fact​",
-        "fade​",
-        "fail​",
-        "fair​",
-        "fake​",
-        "fall​",
-        "fame​",
-        "fans​",
-        "fare​",
-        "farm​",
-        "fast​",
-        "fate​",
-        "fats​",
-        "faux​",
-        "fave​",
-        "fear​",
-        "feat​",
-        "feed​",
-        "feel​",
-        "fees​",
-        "feet​",
-        "fell​",
-        "felt​",
-        "fest​",
-        "fiat​",
-        "file​",
-        "fill​",
-        "film​",
-        "find​",
-        "fine​",
-        "fire​",
-        "firm​",
-        "fish​",
-        "fist​",
-        "fits​",
-        "five​",
-        "flag​",
-        "flap​",
-        "flat​",
-        "flaw​",
-        "flea​",
-        "fled​",
-        "flew​",
-        "flex​",
-        "flip​",
-        "flop​",
-        "flow​",
-        "flux​",
-        "foam​",
-        "foil​",
-        "fold​",
-        "folk​",
-        "fond​",
-        "font​",
-        "food​",
-        "fool​",
-        "foot​",
-        "ford​",
-        "fore​",
-        "fork​",
-        "form​",
-        "fort​",
-        "foul​",
-        "four​",
-        "free​",
-        "frog​",
-        "from​",
-        "fuel​",
-        "full​",
-        "fund​",
-        "funk​",
-        "fury​",
-        "fuse​",
-        "gage​",
-        "gain​",
-        "gala​",
-        "gale​",
-        "gals​",
-        "game​",
-        "gang​",
-        "gaps​",
-        "gate​",
-        "gave​",
-        "geek​",
-        "gems​",
-        "gene​",
-        "gets​",
-        "gift​",
-        "gigs​",
-        "gill​",
-        "girl​",
-        "give​",
-        "glad​",
-        "glen​",
-        "glow​",
-        "glue​",
-        "goal​",
-        "goat​",
-        "gods​",
-        "goes​",
-        "gold​",
-        "golf​",
-        "gone​",
-        "good​",
-        "gore​",
-        "goth​",
-        "gown​",
-        "grab​",
-        "grad​",
-        "gram​",
-        "gran​",
-        "gray​",
-        "grew​",
-        "grey​",
-        "grid​",
-        "grim​",
-        "grip​",
-        "grow​",
-        "gulf​",
-        "gull​",
-        "guns​",
-        "guru​",
-        "guys​",
-        "hack​",
-        "haha​",
-        "hail​",
-        "hair​",
-        "hale​",
-        "half​",
-        "hall​",
-        "halo​",
-        "halt​",
-        "hand​",
-        "hang​",
-        "hard​",
-        "harm​",
-        "harp​",
-        "hash​",
-        "hate​",
-        "hath​",
-        "hats​",
-        "haul​",
-        "have​",
-        "hawk​",
-        "head​",
-        "heal​",
-        "heap​",
-        "hear​",
-        "heat​",
-        "heck​",
-        "heel​",
-        "held​",
-        "hell​",
-        "help​",
-        "herb​",
-        "herd​",
-        "here​",
-        "hero​",
-        "hide​",
-        "high​",
-        "hike​",
-        "hill​",
-        "hint​",
-        "hips​",
-        "hire​",
-        "hist​",
-        "hits​",
-        "hmmm​",
-        "hold​",
-        "hole​",
-        "holy​",
-        "home​",
-        "hood​",
-        "hook​",
-        "hoop​",
-        "hope​",
-        "horn​",
-        "hose​",
-        "host​",
-        "hour​",
-        "hubs​",
-        "huge​",
-        "hull​",
-        "hung​",
-        "hunk​",
-        "huns​",
-        "hunt​",
-        "hurt​",
-        "hype​",
-        "icon​",
-        "idea​",
-        "idle​",
-        "idol​",
-        "inch​",
-        "info​",
-        "inns​",
-        "into​",
-        "ions​",
-        "iris​",
-        "iron​",
-        "isle​",
-        "item​",
-        "jack​",
-        "jade​",
-        "jail​",
-        "jake​",
-        "jane​",
-        "jars​",
-        "java​",
-        "jazz​",
-        "jean​",
-        "jedi​",
-        "jeep​",
-        "jerk​",
-        "jets​",
-        "jill​",
-        "jobs​",
-        "joey​",
-        "john​",
-        "join​",
-        "joke​",
-        "josh​",
-        "jump​",
-        "junk​",
-        "jury​",
-        "just​",
-        "keen​",
-        "keep​",
-        "kept​",
-        "kern​",
-        "keys​",
-        "kick​",
-        "kids​",
-        "kill​",
-        "kind​",
-        "king​",
-        "kiss​",
-        "kite​",
-        "kits​",
-        "knee​",
-        "knew​",
-        "knit​",
-        "knob​",
-        "knot​",
-        "know​",
-        "labs​",
-        "lace​",
-        "lack​",
-        "lady​",
-        "laid​",
-        "lake​",
-        "lamb​",
-        "lame​",
-        "lamp​",
-        "land​",
-        "lane​",
-        "lang​",
-        "last​",
-        "late​",
-        "lava​",
-        "lawn​",
-        "laws​",
-        "lazy​",
-        "lead​",
-        "leaf​",
-        "leak​",
-        "lean​",
-        "leap​",
-        "left​",
-        "legs​",
-        "lend​",
-        "lens​",
-        "less​",
-        "lets​",
-        "levy​",
-        "lick​",
-        "lien​",
-        "lies​",
-        "lieu​",
-        "life​",
-        "lift​",
-        "like​",
-        "lily​",
-        "lima​",
-        "limb​",
-        "lime​",
-        "limo​",
-        "limp​",
-        "line​",
-        "link​",
-        "lion​",
-        "lips​",
-        "lisp​",
-        "list​",
-        "lite​",
-        "live​",
-        "load​",
-        "loan​",
-        "lock​",
-        "loft​",
-        "logo​",
-        "logs​",
-        "lone​",
-        "long​",
-        "look​",
-        "loop​",
-        "lord​",
-        "lose​",
-        "loss​",
-        "lost​",
-        "lots​",
-        "loud​",
-        "love​",
-        "lows​",
-        "luck​",
-        "lump​",
-        "luna​",
-        "lung​",
-        "lush​",
-        "lust​",
-        "lynx​",
-        "made​",
-        "maid​",
-        "mail​",
-        "main​",
-        "make​",
-        "male​",
-        "mall​",
-        "mama​",
-        "many​",
-        "maps​",
-        "mare​",
-        "mark​",
-        "mars​",
-        "mart​",
-        "mask​",
-        "mass​",
-        "mast​",
-        "mate​",
-        "math​",
-        "mats​",
-        "mayo​",
-        "maze​",
-        "meal​",
-        "mean​",
-        "meat​",
-        "meds​",
-        "meet​",
-        "mega​",
-        "melt​",
-        "memo​",
-        "menu​",
-        "mere​",
-        "mesa​",
-        "mesh​",
-        "mess​",
-        "meta​",
-        "mets​",
-        "mice​",
-        "midi​",
-        "mild​",
-        "mile​",
-        "milk​",
-        "mill​",
-        "mime​",
-        "mind​",
-        "mine​",
-        "mini​",
-        "mint​",
-        "miss​",
-        "mist​",
-        "mock​",
-        "mode​",
-        "mods​",
-        "mold​",
-        "mole​",
-        "moms​",
-        "monk​",
-        "mono​",
-        "mood​",
-        "moon​",
-        "more​",
-        "moss​",
-        "most​",
-        "move​",
-        "much​",
-        "mugs​",
-        "muse​",
-        "must​",
-        "mute​",
-        "myth​",
-        "nail​",
-        "name​",
-        "nano​",
-        "navy​",
-        "near​",
-        "neat​",
-        "neck​",
-        "need​",
-        "neon​",
-        "nest​",
-        "nets​",
-        "news​",
-        "next​",
-        "nice​",
-        "nick​",
-        "nine​",
-        "nite​",
-        "node​",
-        "noel​",
-        "noir​",
-        "none​",
-        "noon​",
-        "nope​",
-        "norm​",
-        "nose​",
-        "note​",
-        "noun​",
-        "nova​",
-        "nuke​",
-        "nuts​",
-        "oaks​",
-        "oath​",
-        "obey​",
-        "odds​",
-        "odor​",
-        "offs​",
-        "oils​",
-        "okay​",
-        "once​",
-        "ones​",
-        "only​",
-        "onto​",
-        "onyx​",
-        "oops​",
-        "opal​",
-        "open​",
-        "oral​",
-        "ours​",
-        "outs​",
-        "oval​",
-        "oven​",
-        "over​",
-        "owed​",
-        "owns​",
-        "pace​",
-        "pack​",
-        "pads​",
-        "page​",
-        "paid​",
-        "pain​",
-        "pair​",
-        "pale​",
-        "palm​",
-        "pals​",
-        "pane​",
-        "pans​",
-        "pant​",
-        "papa​",
-        "park​",
-        "part​",
-        "pass​",
-        "past​",
-        "path​",
-        "pays​",
-        "peak​",
-        "pear​",
-        "peas​",
-        "peek​",
-        "peel​",
-        "peer​",
-        "pens​",
-        "peso​",
-        "pest​",
-        "pets​",
-        "pick​",
-        "pics​",
-        "pier​",
-        "pigs​",
-        "pike​",
-        "pile​",
-        "pill​",
-        "pine​",
-        "ping​",
-        "pink​",
-        "pins​",
-        "pipe​",
-        "pity​",
-        "plan​",
-        "play​",
-        "plea​",
-        "plot​",
-        "plug​",
-        "plum​",
-        "plus​",
-        "poem​",
-        "poet​",
-        "pogo​",
-        "pole​",
-        "polk​",
-        "poll​",
-        "polo​",
-        "poly​",
-        "pond​",
-        "pony​",
-        "pool​",
-        "poor​",
-        "pope​",
-        "pops​",
-        "pork​",
-        "port​",
-        "pose​",
-        "post​",
-        "pots​",
-        "pour​",
-        "pray​",
-        "prep​",
-        "prey​",
-        "prom​",
-        "prop​",
-        "pros​",
-        "pubs​",
-        "pull​",
-        "pulp​",
-        "puma​",
-        "pump​",
-        "punk​",
-        "pure​",
-        "push​",
-        "puts​",
-        "quad​",
-        "quit​",
-        "quiz​",
-        "race​",
-        "rack​",
-        "rage​",
-        "raid​",
-        "rail​",
-        "rain​",
-        "ramp​",
-        "rams​",
-        "rank​",
-        "rant​",
-        "rare​",
-        "rash​",
-        "rate​",
-        "rats​",
-        "rave​",
-        "rays​",
-        "read​",
-        "real​",
-        "rear​",
-        "reds​",
-        "reed​",
-        "reef​",
-        "reel​",
-        "rely​",
-        "reno​",
-        "rent​",
-        "reps​",
-        "rest​",
-        "ribs​",
-        "rice​",
-        "rich​",
-        "rick​",
-        "ride​",
-        "rims​",
-        "ring​",
-        "riot​",
-        "ripe​",
-        "rise​",
-        "risk​",
-        "rite​",
-        "ritz​",
-        "road​",
-        "robe​",
-        "rock​",
-        "rode​",
-        "rods​",
-        "role​",
-        "roll​",
-        "roof​",
-        "room​",
-        "root​",
-        "rope​",
-        "rose​",
-        "rows​",
-        "ruby​",
-        "rude​",
-        "rugs​",
-        "ruin​",
-        "rule​",
-        "runs​",
-        "rush​",
-        "rust​",
-        "sack​",
-        "safe​",
-        "saga​",
-        "sage​",
-        "said​",
-        "sail​",
-        "sake​",
-        "sale​",
-        "salt​",
-        "same​",
-        "sand​",
-        "sang​",
-        "sans​",
-        "save​",
-        "says​",
-        "scam​",
-        "scan​",
-        "scat​",
-        "seal​",
-        "seas​",
-        "seat​",
-        "secs​",
-        "sect​",
-        "seed​",
-        "seek​",
-        "seem​",
-        "seen​",
-        "sees​",
-        "self​",
-        "sell​",
-        "semi​",
-        "send​",
-        "sent​",
-        "sept​",
-        "sets​",
-        "shaw​",
-        "shed​",
-        "shin​",
-        "ship​",
-        "shoe​",
-        "shop​",
-        "shot​",
-        "show​",
-        "shut​",
-        "sick​",
-        "side​",
-        "sigh​",
-        "sign​",
-        "silk​",
-        "sims​",
-        "sing​",
-        "sink​",
-        "sins​",
-        "site​",
-        "sits​",
-        "size​",
-        "skin​",
-        "skip​",
-        "slam​",
-        "slim​",
-        "slip​",
-        "slot​",
-        "slow​",
-        "snap​",
-        "snow​",
-        "soap​",
-        "sock​",
-        "soda​",
-        "sofa​",
-        "soft​",
-        "soho​",
-        "soil​",
-        "sold​",
-        "sole​",
-        "solo​",
-        "some​",
-        "song​",
-        "sons​",
-        "soon​",
-        "sore​",
-        "sort​",
-        "soul​",
-        "soup​",
-        "sour​",
-        "spam​",
-        "span​",
-        "spas​",
-        "spin​",
-        "spot​",
-        "stag​",
-        "star​",
-        "stat​",
-        "stay​",
-        "stem​",
-        "step​",
-        "stir​",
-        "stop​",
-        "stud​",
-        "subs​",
-        "such​",
-        "suck​",
-        "sued​",
-        "suit​",
-        "sums​",
-        "sung​",
-        "sure​",
-        "surf​",
-        "swan​",
-        "swap​",
-        "swim​",
-        "sync​",
-        "tabs​",
-        "tack​",
-        "tags​",
-        "tail​",
-        "take​",
-        "tale​",
-        "talk​",
-        "tall​",
-        "tang​",
-        "tank​",
-        "tape​",
-        "taps​",
-        "task​",
-        "taxi​",
-        "team​",
-        "tear​",
-        "teas​",
-        "tech​",
-        "teen​",
-        "tees​",
-        "tele​",
-        "tell​",
-        "temp​",
-        "tend​",
-        "tens​",
-        "tent​",
-        "term​",
-        "test​",
-        "text​",
-        "than​",
-        "that​",
-        "thee​",
-        "them​",
-        "then​",
-        "they​",
-        "thin​",
-        "this​",
-        "thou​",
-        "thru​",
-        "thus​",
-        "tick​",
-        "tide​",
-        "tied​",
-        "tier​",
-        "ties​",
-        "tiff​",
-        "tile​",
-        "till​",
-        "tilt​",
-        "time​",
-        "tiny​",
-        "tips​",
-        "tire​",
-        "toes​",
-        "told​",
-        "toll​",
-        "tomb​",
-        "tome​",
-        "tone​",
-        "tons​",
-        "took​",
-        "tool​",
-        "toon​",
-        "tops​",
-        "torn​",
-        "toss​",
-        "tote​",
-        "tour​",
-        "town​",
-        "toys​",
-        "trap​",
-        "tray​",
-        "tree​",
-        "trek​",
-        "trim​",
-        "trio​",
-        "trip​",
-        "troy​",
-        "true​",
-        "tube​",
-        "tuna​",
-        "tune​",
-        "turf​",
-        "turn​",
-        "twin​",
-        "type​",
-        "ugly​",
-        "undo​",
-        "unit​",
-        "unto​",
-        "upon​",
-        "urge​",
-        "used​",
-        "user​",
-        "uses​",
-        "vail​",
-        "vain​",
-        "vale​",
-        "vans​",
-        "vary​",
-        "vase​",
-        "vast​",
-        "vein​",
-        "vent​",
-        "verb​",
-        "very​",
-        "vest​",
-        "vibe​",
-        "vice​",
-        "vids​",
-        "view​",
-        "vine​",
-        "visa​",
-        "viva​",
-        "void​",
-        "volt​",
-        "vote​",
-        "wade​",
-        "wage​",
-        "wait​",
-        "wake​",
-        "walk​",
-        "wall​",
-        "want​",
-        "ward​",
-        "ware​",
-        "warm​",
-        "warn​",
-        "warp​",
-        "wars​",
-        "wash​",
-        "watt​",
-        "wave​",
-        "ways​",
-        "weak​",
-        "wear​",
-        "webs​",
-        "weed​",
-        "week​",
-        "well​",
-        "went​",
-        "were​",
-        "west​",
-        "what​",
-        "when​",
-        "whip​",
-        "whom​",
-        "wide​",
-        "wife​",
-        "wigs​",
-        "wiki​",
-        "wild​",
-        "will​",
-        "wind​",
-        "wine​",
-        "wing​",
-        "wins​",
-        "wipe​",
-        "wire​",
-        "wise​",
-        "wish​",
-        "with​",
-        "woke​",
-        "wolf​",
-        "wont​",
-        "wood​",
-        "wool​",
-        "word​",
-        "wore​",
-        "work​",
-        "worm​",
-        "worn​",
-        "wrap​",
-        "yale​",
-        "yard​",
-        "yarn​",
-        "yeah​",
-        "year​",
-        "yoga​",
-        "your​",
-        "zero​",
-        "zeta​",
-        "zinc​",
-        "zone​",
-        "zoom​"
+        'case', 'else', 'true', 'bird', 'null', 'this', 'void', 'down', 'with', 'bike', 'bend', 'barn', 'bone', 'func', 'data', 'deal', 'diet', 'dots', 'eggs', 'euro', 'feed', 'fast', 'gate', 'girl', 'help','life','trap','sung', 'take', 'make', 'bake', 'wake', 'fake', 'late', 'tray', 'clay', 'know', 'slow', 'sand', 'jump', 'swam', 'swim', 'kite', 'site', 'word', 'game', 'grow', 'huge'
     ]
 
 
@@ -1687,7 +16,7 @@ function gridGeneration()
 {
     function randomNum(min, max)
     {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+        return Math.floor(Math.random() * (max + 1 - min) + min)
     }
     function generateBlankSpaces()
     {
@@ -1698,11 +27,123 @@ function gridGeneration()
         c = 0
         while (c <= amountOfSquares)
         {
-            blankSpaces.push(randomNum(1,16))
+            blankSpaces.push(randomNum(1,15))
             c++
         }
 
         return blankSpaces
+    }
+    function generateWord(length, letter, placement)
+    {
+        console.log(letter, placement)
+        if(!placement)
+        {
+            if(length == 4)
+            {
+                return wordsList[2][randomNum(0,wordsList[2].length - 1)]
+            }
+            if(length == 3)
+            {
+                return wordsList[1][randomNum(0,wordsList[1].length - 1)]
+            }
+            if(length == 2)
+            {
+                return wordsList[0][randomNum(0,wordsList[0].length - 1)]
+            }
+
+            return
+
+        }
+
+        if(placement == 'both')
+        {
+            console.log('letter both ' + ' ' + letter[0] + ' ' + letter[1])
+
+            const beforeLetter = letter[0]
+            const afterLetter = letter[1]
+
+            var c=0
+            var wordFound = ''
+            while (c<50)
+            {
+                const word = generateWord(length)
+                if(word[word.length-1] == afterLetter)
+                {
+                    if(word[0] == beforeLetter)
+                    {
+                        wordFound = word
+                        break
+                    }
+                }
+                c+=1
+            }
+            if(wordFound != '')
+            {
+                return wordFound
+            }else{
+                return null
+            }
+        }
+        
+        if(placement == 'end'){
+            console.log('letter end ' + ' ' + letter)
+            var c=0
+            var wordFound = ''
+            while (c<50)
+            {
+                const word = generateWord(length)
+                if(word[word.length-1] == letter)
+                {
+                    wordFound = word
+                    break
+                }
+                c+=1
+            }
+            if(wordFound != '')
+            {
+                return wordFound
+            }else{
+                return null
+            }
+        }
+
+        if(placement == 'before')
+        {
+            console.log('letter beg ' + letter)
+            var c=0
+            var wordFound = ''
+            while (c<50)
+            {
+                const word = generateWord(length)
+                if(word[0] == letter)
+                {
+                    wordFound = word
+                    break
+                }
+                c+=1
+            }
+            if(wordFound != '')
+            {
+                return wordFound
+            }else{
+                return null
+            }
+        }
+    }
+    function placeWord(grid, word, positions)
+    {
+        count = 0
+        console.log(positions)
+        while (count < word.length)
+        {
+            grid[positions[count]] = word[count]
+            console.log(positions[count] + ' asigned with ' + word[count])
+            count += 1
+        }
+
+        console.log('Placed word: ' + word)
+
+        return grid
     }
 
     // KEY
@@ -1715,22 +156,609 @@ function gridGeneration()
         '','','',''
     ]
     
-    blankSpaceList = generateBlankSpaces()
+    // blankSpaceList = generateBlankSpaces()
     
-    for (blankS in grid)
-    {
-        const pos = gird[blankS]
+    // for (blankS in blankSpaceList)
+    // {
+    //     const pos = blankSpaceList[blankS]
+    //     grid[pos] = '.'
+    // }
 
-        grid[pos] = '.'
-    }
+    console.log(grid)
     
-    var filledSpace = blankSpaceList.length
+    // var filledSpace = blankSpaceList.length
+    var filledSpace = 0
+
+    var c=0
+
+    var recentWord = [] // word, direction
 
     while (filledSpace < 16)
     {
-        const wordLength = randomNum(2,4)
-        
-    }
-    
+        if(recentWord.length > 0)
+        {
+            const word = recentWord[0]
+            const direction = recentWord[1]
 
+            const wordLength = randomNum(2,4)
+
+            if(direction >= 2)
+            {
+                var wordToPlace = generateWord(wordLength, word[0], 'end')
+            }else{
+                var wordToPlace = generateWord(wordLength, word[0], 'before')
+            }
+
+            console.log(wordToPlace)
+
+            if(wordToPlace == null)
+            {
+                wordToPlace = generateWord(wordLength)
+            }else{
+                if(direction == 0)
+                {
+                    grid[1] = wordToPlace[1]
+                    if(wordToPlace[2] != null)
+                    {
+                        grid[2] = wordToPlace[2]
+                    }
+                    if(wordToPlace[3] != null)
+                    {
+                        grid[3] = wordToPlace[3]
+
+                        grid[15] = '.'
+
+                        const Mword1 = generateWord(3, grid[3], 'before')
+                        if(Mword1 != null)
+                        {
+                            grid[7] = Mword1[1]
+                            grid[11] = Mword1[2]
+                        }
+
+                        const Mword2 = generateWord(3, grid[12], 'before')
+                        if(Mword2 != null)
+                        {
+                            grid[13] = Mword2[1]
+                            grid[14] = Mword2[2]
+
+                            const largeW3 = generateWord(4, [grid[2], grid[14]], 'both')
+                            if(largeW3 != null)
+                            {
+                                grid[6] = largeW3[1]
+                                grid[10] = largeW3[2]
+                            }else{
+                                const medW4 = generateWord(3, grid[8], 'before')
+                                if(medW4 != null)
+                                {
+                                    grid[9] = medW4[1]
+                                    grid[10] = medW4[2]
+                                }
+                            }   
+
+                        }
+
+
+
+
+
+                    }else{
+                        newWord = generateWord(4)
+                        grid[3] = newWord[0]
+                        grid[7] = newWord[1]
+                        grid[11] = newWord[2]
+                        grid[15] = newWord[3]
+
+                        if(wordToPlace[2] == null)
+                        {
+                            const smallW1 = generateWord(2, grid[3], 'end')
+                            if(smallW1 != null)
+                            {
+                                grid[2] = smallW1[1]
+                            }else{
+                                const smallW2 = generateWord(2, grid[1], 'before')
+
+                                if(smallW2 != null)
+                                {
+                                    grid[2] = smallW2[1]
+                                }
+                            }
+                        }
+
+                        const bp = randomNum(0,1)
+                        if(bp == 0)
+                        {
+                            grid[13] = '.'
+                            grid[9] = '.'
+
+                            const largeW1 = generateWord(4, grid[2], 'before')
+                            if(largeW1 != null)
+                            {
+                                grid[6] = largeW1[1]
+                                grid[10] = largeW1[2]
+                                grid[14] = largeW1[3]
+                            }else{
+                                const largeW1 = generateWord(3, grid[2], 'before')
+                                if(largeW1 != null)
+                                {
+                                    grid[6] = largeW1[1]
+                                    grid[10] = largeW1[2]
+                                }
+                            }
+
+                            const sw1 = generateWord(2, grid[4], 'before')
+                            grid[5] = sw1[1]
+                        }else{
+                            grid[6] = '.'
+                            grid[13] = '.'
+
+                            if(wordToPlace[2] == null)
+                            {
+                                const medw3 = generateWord(3, [grid[1], grid[3]], 'both')
+                                if(medw3 != null)
+                                {
+                                    grid[2] = medw3[1]
+                                }
+                            }
+
+                            const largeW2 = generateWord(4, [grid[8], grid[11]], 'both')
+                            if(largeW2 != null)
+                            {
+                                grid[9] = largeW2[1]
+                                grid[10] = largeW2[2]
+                            }else{
+                                const mediumW1 = generateWord(3, grid[8], 'before')
+                                if(mediumW1 != null)
+                                {
+                                    grid[9] = mediumW1[1]
+                                    grid[10] = mediumW1[2]
+                                }
+                            }
+
+                            if(grid[10] != '')
+                            {
+                                const smallW5 = generateWord(2,grid[10], 'before')
+                                if(smallW5 != null)
+                                {
+                                    grid[14] = smallW5[1]
+                                }else{
+                                    const smallW6 = generateWord(2,grid[15], 'end')
+                                    if(smallW6 != null)
+                                    {
+                                        grid[14] = smallW6[0]
+                                    }
+                                }
+                            }else{
+                                const smallW7 = generateWord(2)
+                                grid[10] = smallW7[0]
+                                grid[11] = smallW7[1]
+                            }
+
+                            const medW2 = generateWord(3, grid[1], 'before')
+                            if(medW2 != null)
+                            {
+                                grid[5] = medW2[1]
+                                grid[9] = medW2[2]
+                            }
+
+                        }
+
+                    }
+
+                }
+                if(direction == 1)
+                {
+                    grid[4] = wordToPlace[1]
+                    if(wordToPlace[2] != null)
+                    {
+                        grid[8] = wordToPlace[2]
+                    }
+                    if(wordToPlace[3] != null)
+                    {
+                        grid[12] = wordToPlace[3]
+
+                        const medW1 = generateWord(4, grid[4], 'before')
+                        if(medW1 != null)
+                        {
+                            grid[5] = medW1[1]
+                            grid[6] = medW1[2]
+                            grid[7] = medW1[3]
+                        }else{
+                            const medW2 = generateWord(3, grid[4], 'before')
+                            if(medW2 != null)
+                            {
+                                grid[5] = medW2[1]
+                                grid[6] = medW2[2]
+                            }
+                        }
+
+                        const smal1w = generateWord(2)
+                        grid[10] = smal1w[0]
+                        grid[14] = smal1w[1]
+                        grid[13] = smal1w[0]
+
+
+
+                    }else{
+                        newWord = generateWord(4)
+                        grid[12] = newWord[0]
+                        grid[13] = newWord[1]
+                        grid[14] = newWord[2]
+                        grid[15] = newWord[3]
+
+                        var bp = randomNum(0,1)
+                        if(bp == 0)
+                        {
+                            grid[5] = '.'
+                            grid[10] = '.'
+                        }else{
+                            grid[6] = '.'
+                            grid[9] = '.'
+                            grid[7] = '.'
+                        }
+
+                        if(wordToPlace[2] == null)
+                        {
+                            var smallW = generateWord(2)
+                            grid[8] = smallW[0]
+                            grid[9] = smallW[1]
+                        }
+
+                        const smartWord = generateWord(4, [grid[3], grid[15]], 'both')
+                        if(smartWord != null)
+                        {
+                            grid[7] = smartWord[1]
+                            grid[11] = smartWord[2]
+                        }else{
+                            if(bp == 0)
+                            {
+
+                                const smallW2 = generateWord(2, grid[3], 'before')
+                                
+                                if(smallW2 != null)
+                                {
+                                    grid[7] = smallW2[1]
+                                    grid[6] = '.'
+                                }else{
+                                    const smallW3 = generateWord(2)
+                                    grid[6] = smallW3[0]
+                                    grid[7] = smallW3[1]
+                                }
+
+                                const smallW4 = generateWord(2, grid[15], 'end')
+                                if(smallW4 != null)
+                                {
+                                    grid[11] = smallW4[0]
+                                }
+                            }
+                        }
+                    }
+                }
+                // if(direction == 2)
+                // {
+                //     grid[2] = wordToPlace[1]
+                //     grid[1] = wordToPlace[2]
+                //     if(wordToPlace[3])
+                //     {
+                //         grid[0] = wordToPlace[3]
+                //     }
+                // }
+                // if(direction == 3)
+                // {
+                //     grid[8] = wordToPlace[1]
+                //     grid[4] = wordToPlace[2]
+                //     if(wordToPlace[3])
+                //     {
+                //         grid[0] = wordToPlace[3]
+                //     }
+                // }
+                break
+            }
+
+
+        }else{
+            const wordLength = 4
+            var direction =randomNum(0,1)
+            const word = generateWord(wordLength)
+
+            console.log(word)
+            
+            filledSpace += wordLength
+
+            recentWord = [word, direction]
+    
+            if(direction == 0)
+            {
+                for (letterIndx in word)
+                {
+                    const letter = word[letterIndx]
+                    grid[letterIndx * 4] = letter
+                }
+            }
+            if(direction == 1)
+            {
+                for (letterIndx in word)
+                {
+                    const letter = word[letterIndx]
+                    grid[letterIndx] = letter
+                }
+            }
+            // if(direction == 2)
+            // {
+            //     for (letterIndx in word)
+            //     {
+            //         const letter = word[letterIndx]
+            //         grid[(letterIndx*4) + 3] = letter
+            //     }
+            // }
+            // if(direction == 3)
+            // {
+            //     console.log('dir 3')
+            //     for (letterIndx in word)
+            //     {
+            //         const letter = word[letterIndx]
+            //         grid[JSON.parse(letterIndx) + 12] = letter
+            //     }
+            // }
+        }
+
+        c++
+    }
+
+
+
+
+    // while (c < 150)
+    // {
+    //     c+=1
+        
+    //     const wordLength = randomNum(2,4)
+    //     const word = generateWord(wordLength)
+        
+    //     if(direction == 0)
+    //     {
+    //         direction = 1
+    //     }else{
+    //         direction = 0
+    //     }
+
+    //     console.log(word)
+
+    //     if(wordLength == 4)
+    //     {
+    //         if(direction == 0)
+    //         {
+    //             if(grid[0] == '' && grid[1] == '' && grid[2] == '' && grid[3] == '')
+    //             {
+    //                 // place word here
+    //                 grid = placeWord(grid, word, [0,1,2,3])
+    //                 filledSpace += 4
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+        
+    //             }else if (grid[4] == '' && grid[5] == '' && grid[6] == '' && grid[7] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [4,5,6,7])
+    //                 filledSpace += 4
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if (grid[8] == '' && grid[9] == '' && grid[10] == '' && grid[11] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [8,9,10,11])
+    //                 filledSpace += 4
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if (grid[12] == '' && grid[13] == '' && grid[14] == '' && grid[15] == ''){
+    //                 grid = placeWord(grid, word, [12,13,14,15])
+    //                 filledSpace += 4
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }
+    //         }
+    //         if(direction == 1)
+    //         {
+    //             if(grid[0] == '' && grid[4] == '' && grid[8] == '' && grid[12] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [0,4,8,12])
+    //                 filledSpace += 4
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if(grid[1] == '' && grid[5] == '' && grid[9] == '' && grid[13] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [1,5,9,13])
+    //                 filledSpace += 4
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if(grid[2] == '' && grid[6] == '' && grid[10] == '' && grid[14] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [2,6,10,14])
+    //                 filledSpace += 4
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if(grid[3] == '' && grid[7] == '' && grid[11] == '' && grid[15] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [3,7,11,15])
+    //                 filledSpace += 4
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }
+    //         }
+    //     }else if(wordLength == 3){
+    //         if(direction == 0)
+    //         {
+    //             if(grid[0] == '' && grid[1] == '' && grid[2] == '')
+    //             {
+    //                 // place word here
+    //                 grid = placeWord(grid, word, [0,1,2])
+    //                 filledSpace += 3
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+        
+    //             }else if (grid[4] == '' && grid[5] == '' && grid[6] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [4,5,6])
+    //                 filledSpace += 3
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if (grid[8] == '' && grid[9] == '' && grid[10] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [8,9,10])
+    //                 filledSpace += 3
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if (grid[12] == '' && grid[13] == '' && grid[14] == ''){
+    //                 grid = placeWord(grid, word, [12,13,14])
+    //                 filledSpace += 3
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }
+    //         }
+            
+    //         if(direction == 1){
+    //             if(grid[0] == '' && grid[4] == '' && grid[8] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [0,4,8])
+    //                 filledSpace += 3
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if(grid[1] == '' && grid[5] == '' && grid[9] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [1,5,9])
+    //                 filledSpace += 3
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if(grid[2] == '' && grid[6] == '' && grid[10] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [2,6,10])
+    //                 filledSpace += 3
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if(grid[3] == '' && grid[7] == '' && grid[11] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [3,7,11])
+    //                 filledSpace += 3
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }
+    //         }
+    //     }else if(wordLength == 2)
+    //     {
+    //         if(direction == 0)
+    //         {
+    //             if(grid[0] == '' && grid[1] == '')
+    //             {
+    //                 // place word here
+    //                 grid = placeWord(grid, word, [0,1])
+    //                 filledSpace += 2
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+        
+    //             }else if (grid[4] == '' && grid[5] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [4,5])
+    //                 filledSpace += 2
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if (grid[8] == '' && grid[9] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [8,9])
+    //                 filledSpace += 2
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if (grid[12] == '' && grid[13] == ''){
+    //                 grid = placeWord(grid, word, [12,13])
+    //                 filledSpace += 2
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }
+    //         }
+            
+    //         if(direction == 1)
+    //         {
+    //             if(grid[0] == '' && grid[4] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [0,4])
+    //                 filledSpace += 2
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if(grid[1] == '' && grid[5] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [1,5])
+    //                 filledSpace += 2
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if(grid[2] == '' && grid[6] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [2,6])
+    //                 filledSpace += 2
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }else if(grid[3] == '' && grid[7] == '')
+    //             {
+    //                 grid = placeWord(grid, word, [3,7])
+    //                 filledSpace += 2
+    //                 attemptsWithoutPlacement = 0
+    //                 continue;
+    //             }
+    //         }
+    //     }
+    //     attemptsWithoutPlacement+=1
+    //     console.log(attemptsWithoutPlacement)
+    //     if(attemptsWithoutPlacement > 10)
+    //     {
+    //         if(16 - filledSpace <= 5)
+    //         {
+    //             grid = fillInBlank(grid)
+    //             break
+    //         }
+    //     }
+    // }
+    
+    // console.log(grid[0] +' '+ grid[1] +''+ grid[2] +''+ grid[3])
+    // console.log(grid[4] +' '+ grid[5] +''+ grid[6] +''+ grid[7])
+    // console.log(grid[8] +' '+ grid[9] +''+ grid[10] +''+ grid[11])
+    // console.log(grid[12] +' '+ grid[13] +''+ grid[14] +''+ grid[15])
+    return grid
 }
+
+function countFilledSpace(grid)
+{
+    var count = 0
+    for (boxIndx in grid)
+    {
+        const box = grid[boxIndx]
+        if(box != '')
+        {
+            count +=1
+        }
+    }
+    return count
+}
+
+function fillInBlank(grid)
+{
+    for (boxIndx in grid)
+    {
+        const box = grid[boxIndx]
+        if(box == '')
+        {
+            grid[boxIndx] = '.'
+        }
+    }
+    return grid
+}
+
+while (true)
+{
+    console.log('---grid---')
+    grid = gridGeneration()
+    var fs = countFilledSpace(grid)
+    if(fs < 14)
+    {
+        continue
+    }
+    grid = fillInBlank(grid)
+    const stringedGrid = JSON.stringify(grid)
+    Cookies.set('grid', stringedGrid)
+    break
+}
+

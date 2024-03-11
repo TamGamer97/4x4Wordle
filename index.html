@@ -7,9 +7,20 @@
 </head>
 <body>
     <div style="width: 100vw; height: 100vh; object-fit: contain; display: flex; justify-content: center; align-items: center;">
-        <img src="/Assets/bg.png" style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;">
+        <!-- <img src="/Assets/bg.png" style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;"> -->
 
-        <div id="gridContainer" style="width: 500px; max-height: 500px; position: absolute; top: 100px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        <div style="width: 100%; height: 5px; background-color: #ebebec; position: absolute; top: 110px;"></div>
+        
+        <h1 style="position: absolute; top: 40px; left: 100px; color: #ffc658; font-size: 40px; font-weight: 300;">Game Name</h1>
+        <h1 style="position: absolute; top: 65px; left: 310px; color: #3c445c; font-size: 25px; font-weight: 400;">March 3rd 2024</h1>
+
+        <img src="/Assets/settingsIcon.png" style="position: absolute; width: 30px; right: 30px; top: 118px; cursor: pointer; z-index: 10;">
+        <img src="/Assets/leaderboardIcon.png" style="position: absolute; width: 30px; right: 70px; top: 118px; cursor: pointer; z-index: 10;">
+        <img src="/Assets/helpIcon.png" style="position: absolute; width: 30px; right: 110px; top: 118px; cursor: pointer; z-index: 10;">
+
+        <div style="width: 100%; height: 5px; background-color: #ebebec; position: absolute; top: 150px;"></div>
+
+        <div id="gridContainer" style="width: 350px; max-height: 500px; position: relative; top: -20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;">
             
             <!-- <div style="width: 90px; height: 90px; background-color: #259FD0;  border: solid #3C445C 3px 0px; border-radius: 20px; display: flex; justify-content: center; align-items: center;">
                 <h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">A</h1>
@@ -25,8 +36,14 @@
             
         </div>
 
+        <div class="checkBtn" style="width: 200px; height: 45px; border-radius: 20px; border: solid #3c445c 2px; position: absolute; top: 850px; cursor: pointer;">
+            <h1 class="checkBtnTxt" style="font-weight: 100; text-align: center; margin-top: 8px; font-size: 25px;">Check</h1>
+        </div>
+
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script src="game.js"></script>
 <script>
 
     var currentBoxSelected = '';
@@ -34,6 +51,11 @@
     var boxesOccupied = [] // [occupies space, occupied by letter]
 
     var pendingSwap = [] // [ [ocupiedSpace, newOwner], [ocupiedSpace, forcedtomoveLetter] ]
+
+    var boxPlacement = [] // [ [boxSpace, letter] ]
+    var correctBoxPlacement = [  ] // [ [boxSpace, letter] ]
+
+    var lettersToFind = []
 
     function loadGrid()
     {
@@ -43,10 +65,34 @@
         // - space for letter
         // . block
 
-        const grid = [ '-', '-', '-', 'T', 
-                       '.', '-', '.', '-',
-                       '-', 'F', '.', '-',
-                       '-', '-', '-', '-' ]
+        // const grid = [ '-', '-', '-', 'T', 
+        //                '.', '-', '.', '-',
+        //                '-', 'F', '.', '-',
+        //                '-', '-', '-', '-' ]
+
+        const correctGrid = JSON.parse(Cookies.get('grid'))
+        const grid = [...correctGrid]
+
+        function randomNum(min, max)
+        {
+            return Math.floor(Math.random() * (max + 1 - min) + min)
+        }
+
+        const maximumAmountOfSpacesToFill = 8
+
+        const amountOfEmptySpaces = randomNum(5,maximumAmountOfSpacesToFill)
+
+        while (lettersToFind.length < amountOfEmptySpaces)
+        {
+            const EmptPos = randomNum(0,15)
+            if(grid[EmptPos] != '.' && grid[EmptPos] != '-')
+            {
+                lettersToFind.push(grid[EmptPos])
+                grid[EmptPos] = '-'
+            }
+        }
+
+        loadOutsideGrid()
 
         for (boxInd in grid)
         {
@@ -57,17 +103,17 @@
             if(box == '-')
             {
                 elem.setAttribute('id', 'textspace')
-                elem.style = 'width: 90px; height: 90px; border: solid #3C445C 3px; border-radius: 20px; display: flex; justify-content: center; align-items: center;'
-                elem.innerHTML = '<h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;"></h1>'
+                elem.style = 'width: 70px; height: 70px; border: solid #3C445C 2px; border-radius: 10px; display: flex; justify-content: center; align-items: center;'
+                elem.innerHTML = '<h1 style="font-size: 45px; font-weight: 300; color: #252525; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;"></h1>'
             }else if (box == '.'){
                 elem.setAttribute('id', 'notext')
-                elem.style = 'width: 90px; height: 90px; background-color: #3C445C;  border: solid transparent 3px; border-radius: 20px; display: flex; justify-content: center; align-items: center;'
-                elem.innerHTML = '<h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;"></h1>'
+                elem.style = 'width: 70px; height: 70px; background-color: #252525;  border: solid transparent 2px; border-radius: 10px; display: flex; justify-content: center; align-items: center;'
+                elem.innerHTML = '<h1 style="font-size: 45px; font-weight: 300; color: #252525; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;"></h1>'
             
             }else{
                 elem.setAttribute('id', 'startingtext')
-                elem.style = 'width: 90px; height: 90px; background-color: #259FD0;  border: solid transparent 3px; border-radius: 20px; display: flex; justify-content: center; align-items: center;'
-                elem.innerHTML = '<h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">'+box+'</h1>'
+                elem.style = 'width: 70px; height: 70px; border: solid #3C445C 2px; border-radius: 10px; display: flex; justify-content: center; align-items: center;'
+                elem.innerHTML = '<h1 style="font-size: 45px; font-weight: 300; color: #252525; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">'+box+'</h1>'
             }
             parent.appendChild(elem)
         }
@@ -80,7 +126,8 @@
     {
         const parent = document.getElementById('outsideGridContainer')
 
-        const letters = [ 'T', 'A', 'P', 'O', 'L', 'R', 'B' , 'S', 'I', 'O', 'I']
+        // const letters = [ 'T', 'A', 'P', 'O', 'L', 'R', 'B' , 'S', 'I', 'O', 'I']
+        const letters = [...lettersToFind]
 
         for (boxInd in letters)
         {
@@ -88,14 +135,12 @@
 
 
             const elem = document.createElement('div')
-            elem.style = 'width: 90px; height: 90px; background-color: #254BD0;  border: solid transparent 3px; border-radius: 20px; display: flex; justify-content: center; align-items: center; cursor: pointer; left: 0px; position: relative; top: 700px;'
-            elem.innerHTML = '<h1 style="font-size: 45px; color: white; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">'+box+'</h1>'
+            elem.style = 'width: 70px; height: 70px; background-color: white; border: solid #3c445c 2px; border-radius: 10px; display: flex; justify-content: center; align-items: center; cursor: pointer; left: 0px; position: relative; top: 700px;'
+            elem.innerHTML = '<h1 style="font-size: 45px; opacity: 0.5; color: black; text-align: center;  width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; font-weight: 300">'+box+'</h1>'
             parent.appendChild(elem)
         }
 
     }
-
-    loadOutsideGrid()
 
     function clickLetter(letter)
     {
@@ -115,21 +160,51 @@
         {
             const boxSpace = boxesOccupied[bOpp][0]
             const letterBox = boxesOccupied[bOpp][1]
+            const gridWidth = 350
 
             console.log(boxesOccupied[bOpp])
 
             console.log()
 
-            document.getElementById('outsideGridContainer').children[letterBox].style.left = document.getElementById('gridContainer').children[boxSpace].offsetLeft + (window.innerWidth / 2) - (250) + 'px'
-            document.getElementById('outsideGridContainer').children[letterBox].style.top = document.getElementById('gridContainer').children[boxSpace].offsetTop + 100 + 'px'
-            
+            document.getElementById('outsideGridContainer').children[letterBox].style.left = document.getElementById('gridContainer').children[boxSpace].offsetLeft + (window.innerWidth / 2) - (gridWidth/2) + 'px'
+            document.getElementById('outsideGridContainer').children[letterBox].style.top = document.getElementById('gridContainer').children[boxSpace].offsetTop + 312 + 'px'
+
+            // document.getElementById('gridContainer').children[boxSpace].style.backgroundColor = 'white'
+            // document.getElementById('gridContainer').children[boxSpace].style.borderColor = 'white'
+            console.log(document.getElementById('gridContainer').children[boxSpace])
+
             // document.getElementById('gridContainer').children[boxSpace].style.borderColor = 'transparent'
         }
 
     }
 
+    function updateLetterBoxPlacement(box, letter)
+    {
+        for (boxIndx in boxPlacement)
+        {
+            const boxesSpace = boxPlacement[boxIndx][0]
+            const boxesLetter = boxPlacement[boxIndx][1]
+
+            console.log('b')
+            console.log(boxesSpace)
+
+            if(boxesLetter == letter)
+            {
+                // update boxplacement
+                boxPlacement[boxIndx][0] = box
+                return
+            }
+        }
+
+        boxPlacement.push([box, letter])
+    }
+
     function eventsLst()
     {
+        window.onresize = () => {
+            reConnectEveryLetterToBox()
+        }
+
         addEventListener('mousedown', (event)=> {
             const x = event.clientX
             const y = event.clientY
@@ -146,12 +221,12 @@
                 const leftPost = letterBox.getBoundingClientRect().left
                 const topPost = letterBox.getBoundingClientRect().top
 
-                const boxWidth = 90
-                const boxHeight = 90
+                const boxWidth = 70
+                const boxHeight = 70
 
-                if(x > leftPost && x < leftPost + 90)
+                if(x > leftPost && x < leftPost + boxWidth)
                 {
-                    if(y > topPost && y < topPost + 90)
+                    if(y > topPost && y < topPost + boxHeight)
                     {
                         console.log('clicked ' + letterInd)
                         currentBoxSelected = letterInd
@@ -167,9 +242,12 @@
             {
                 const boxSpace = boxSpaceSelected
                 const letterBox = currentBoxSelected
+
     
 
                 boxesOccupied.push([boxSpace, letterBox])
+
+                updateLetterBoxPlacement(boxSpace, letterBox)
 
 
                 reConnectEveryLetterToBox()
@@ -185,8 +263,9 @@
             const x = event.clientX
             const y = event.clientY
 
-            const boxWidth = 90
-            const boxHeight = 90
+            const boxWidth = 70
+            const boxHeight = 70
+            const gridWidth = 350
 
             if(currentBoxSelected != '')
             {
@@ -202,13 +281,13 @@
 
                 
                 
-                const leftPost = document.getElementById('outsideGridContainer').children[currentBox].offsetLeft - (window.innerWidth/2) +250 + 45
-                const topPost = document.getElementById('outsideGridContainer').children[currentBox].offsetTop - 100 + 45
+                const leftPost = document.getElementById('outsideGridContainer').children[currentBox].offsetLeft - (window.innerWidth/2) +(gridWidth/2) + (boxWidth/2)
+                const topPost = document.getElementById('outsideGridContainer').children[currentBox].offsetTop - 300 + (boxWidth/2)
                 
                 const parentBoxes = document.getElementById('gridContainer').children
                 
-                const boxesWidthAmdHeight = 90
-                const gapSpace = 20
+                const boxesWidthAmdHeight = 70
+                const gapSpace = 5
                 
                 // console.log(topPost)
                 for (boxSpaceIndx in parentBoxes)
@@ -222,9 +301,9 @@
                     {
                         boxSpace.style.backgroundColor = 'transparent'
                     }else if (boxSpace.id == 'notext'){
-                        boxSpace.style.backgroundColor = '#3C445C'
+                        boxSpace.style.backgroundColor = '#252525'
                     }else if (boxSpace.id == 'startingtext'){
-                        boxSpace.style.backgroundColor = '#259FD0'
+                        // boxSpace.style.backgroundColor = '#259FD0'
                     }
 
 
@@ -270,8 +349,10 @@
                                     {
                                         matched = true
                                         console.log('matched with ' + boxSpaceIndx)
-                                        boxSpace.style.backgroundColor = '#8C44FF'
+                                        boxSpace.style.backgroundColor = '#ffa019'
                                         boxSpaceSelected = boxSpaceIndx
+                                        document.getElementById('outsideGridContainer').children[currentBox].style.backgroundColor = '#ffa019'
+                                        document.getElementById('outsideGridContainer').children[currentBox].style.color = '#ffa019'
                                     }
                                 }
                             }
@@ -299,8 +380,8 @@
                     {
                         const letterElem = lettersList[lIndx]
 
-                        const leftPostLet = letterElem.offsetLeft - (window.innerWidth/2) +250 + 45
-                        const topPostLet = letterElem.offsetTop - 100 + 45
+                        const leftPostLet = letterElem.offsetLeft - (window.innerWidth/2) +250 + (boxesWidthAmdHeight/2)
+                        const topPostLet = letterElem.offsetTop - 300 + (boxesWidthAmdHeight/2)
 
                         if(leftPostLet > boxElem.offsetLeft - (gapSpace) && leftPostLet < boxElem.offsetLeft + boxesWidthAmdHeight)
                         {
@@ -315,7 +396,7 @@
                     {
                         console.log('letter has been removed from box')
                         boxesOccupied.splice(boxOcpIndx, 1)
-                        document.getElementById('gridContainer').children[boxesOcp].setAttribute('style', 'width: 90px; height: 90px; border: solid #3C445C 3px; border-radius: 20px; display: flex; justify-content: center; align-items: center;')
+                        document.getElementById('gridContainer').children[boxesOcp].setAttribute('style', 'width: 70px; height: 70px; border: solid #3C445C 2px; border-radius: 10px; display: flex; justify-content: center; align-items: center;')
                         // console.log(document.getElementById('gridContainer').children[boxesOcp])
                     }
                 }
@@ -351,6 +432,13 @@
             -ms-user-select: none; /* Internet Explorer/Edge */
                 user-select: none; /* Non-prefixed version, currently
                                       supported by Chrome, Edge, Opera and Firefox */
+    }
+
+    .checkBtn:hover{
+        background-color: #3c445c;
+        .checkBtnTxt{
+            color: white;
+        }
     }
 </style>
 </html>
