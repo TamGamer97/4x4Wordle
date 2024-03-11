@@ -167,7 +167,7 @@
             console.log()
 
             document.getElementById('outsideGridContainer').children[letterBox].style.left = document.getElementById('gridContainer').children[boxSpace].offsetLeft + (window.innerWidth / 2) - (gridWidth/2) + 'px'
-            document.getElementById('outsideGridContainer').children[letterBox].style.top = document.getElementById('gridContainer').children[boxSpace].offsetTop + 312 + 'px'
+            document.getElementById('outsideGridContainer').children[letterBox].style.top = document.getElementById('gridContainer').children[boxSpace].offsetTop + (document.getElementById('gridContainer').offsetTop) + 'px'
 
             // document.getElementById('gridContainer').children[boxSpace].style.backgroundColor = 'white'
             // document.getElementById('gridContainer').children[boxSpace].style.borderColor = 'white'
@@ -282,7 +282,7 @@
                 
                 
                 const leftPost = document.getElementById('outsideGridContainer').children[currentBox].offsetLeft - (window.innerWidth/2) +(gridWidth/2) + (boxWidth/2)
-                const topPost = document.getElementById('outsideGridContainer').children[currentBox].offsetTop - 300 + (boxWidth/2)
+                const topPost = document.getElementById('outsideGridContainer').children[currentBox].offsetTop - (document.getElementById('gridContainer').offsetTop) + (boxWidth/2)
                 
                 const parentBoxes = document.getElementById('gridContainer').children
                 
@@ -381,7 +381,7 @@
                         const letterElem = lettersList[lIndx]
 
                         const leftPostLet = letterElem.offsetLeft - (window.innerWidth/2) +250 + (boxesWidthAmdHeight/2)
-                        const topPostLet = letterElem.offsetTop - 300 + (boxesWidthAmdHeight/2)
+                        const topPostLet = letterElem.offsetTop - (document.getElementById('gridContainer').offsetTop) + (boxesWidthAmdHeight/2)
 
                         if(leftPostLet > boxElem.offsetLeft - (gapSpace) && leftPostLet < boxElem.offsetLeft + boxesWidthAmdHeight)
                         {
